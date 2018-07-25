@@ -1,0 +1,289 @@
+groups:
+  Randaja:
+    options:
+      prefix: ' &2&l&oRändaja &f'
+      default: 'true'
+    permissions:
+    - pinauthentication.use
+    - pinauthentication.main
+    - -minecraft.command.*
+    - -bukkit.command.*
+    - guishop.use
+    - guishop.slot.[*]
+    - crazycrates.menu
+    - crazycrates.access
+    - crazycrates.access
+    - essentials.sethome
+    - essentials.fly
+    - essentials.pay
+    - essentials.recipe
+    - essentials.kits.algaja
+    - essentials.helpop
+    - essentials.getpos
+    - essentials.list
+    - modifyworld.*
+    - essentials.delhome
+    - essentials.help
+    - essentials.rules
+    - essentials.motd
+    - essentials.afk
+    - essentials.back
+    - essentials.back.ondeath
+    - essentials.depth
+    - essentials.help
+    - essentials.home
+    - essentials.kit
+    - essentials.kit.tools
+    - essentials.list
+    - essentials.mail
+    - essentials.mail.send
+    - essentials.me
+    - essentials.motd
+    - essentials.msg
+    - essentials.ping
+    - essentials.r
+    - essentials.back
+    - essentials.rules
+    - essentials.seen
+    - essentials.signs.use.disposal
+    - essentials.spawn
+    - essentials.suicide
+    - essentials.tpa
+    - essentials.tpaccept
+    - essentials.tpahere
+    - essentials.tpdeny
+    - essentials.balance
+    - essentials.warp
+    - essentials.warp.list
+    - jobs.max.3
+  VIP:
+    options:
+      prefix: ' &2&l&oVIP &f'
+    inheritance:
+    - Randaja
+    permissions:
+    - pinauthentication.use
+    - pinauthentication.main
+    - -minecraft.command.*
+    - -bukkit.command.*
+  Ehitaja:
+    options:
+      prefix: ' &9&l&oEhitaja &f'
+    inheritance:
+    - VIP
+    
+    permissions:
+  PLAT:
+    options:
+      prefix: ' &5&l&oPlatinum &r'
+    inheritance:
+    - Ehitaja
+    permissions:
+    - essentials.nick
+    - essentials.workbench
+    - essentials.fly
+    - bukkit.command.gamemode.*
+  Abistaja:
+    options:
+      prefix: ' &6&l&oAbistaja &f'
+    inheritance:
+    - PLAT
+  Moderaator:
+    options:
+      prefix: ' &a&l&oModeraator &r'
+    inheritance:
+    - Abistaja
+    permissions:
+    - jobs.max.4
+    - essentials.sethome.multiple
+    - essentials.sethome.multiple.default
+    - essentials.kick
+    - essentials.fly
+    - essentials.ban
+    - essentials.god
+    - essentials.tp
+    - essentials.tphere
+    - essentials.feed
+    - essentials.vanish
+    - essentials.invsee
+    - essentials.tpaccept
+    - essentials.tempban
+    - essentials.mute
+    - essentials.enderchest
+    - worldedit.wand
+    - worldedit.selection.pos
+    - worldguard.region.wand
+    - worldguard.selection.expand
+    - worldguard.region.define
+    - worldguard.region.redefine.*
+    - worldguard.region.select.*
+    - worldguard.region.info.*
+    - worldguard.expandvert
+    - worldguard.region.setparent.*
+    - worldguard.region.addowner.*
+    - worldguard.region.removeowner.*
+    - worldguard.region.addmember.*
+    - worldguard.region.removemember.*
+    - worldguard.region.list
+    - worldguard.region.flag.flags.greeting.*
+    - worldguard.region.flag.flags.farewell.*
+    - worldguard.region.flag.flags.notify-enter.*
+    - worldguard.region.flag.flags.notify-leave.*
+    - worldguard.region.flag.flags.pvp.*
+    - worldguard.region.remove.*
+    - worldedit.selection.hpos
+    worlds:
+      '&r':
+        options:
+          prefix: '&a&l&oModeraator'
+  Administraator:
+    options:
+      prefix: ' &3&l&oAdmin &f'
+    inheritance:
+    - Moderaator
+    permissions:
+    - jobs.max.5
+    - essentials.nick
+    - essentials.fly
+    - essentials.tp
+    - essentials.echest
+    - essentials.reload
+    - essentials.echest.others
+    - essentials.broadcast
+    - essentials.invsee
+    - essentials.gamemode.all
+    - essentials.clearinventory
+    - essentials.time
+    - essentials.chat.color
+    - essentials.day
+    - essentials.afk.others
+    - essentials.balance.others
+    - essentials.ban
+    - essentials.near
+    - essentials.ban.notify
+    - essentials.banip
+    - essentials.setwarp
+    - essentials.delwarp
+    - null
+    - essentials.broadcast
+    - essentials.clearinventory.others
+    - essentials.fly
+    - essentials.getpos
+    - essentials.helpop.receive
+    - essentials.invsee
+    - essentials.invsee.modify
+    - essentials.item
+    - essentials.itemdb
+    - essentials.jail
+    - essentials.jails
+    - essentials.kick
+    - essentials.kick.notify
+    - essentials.kill
+    - essentials.lightning
+    - essentials.mute
+    - essentials.seen
+    - essentials.signs.*
+    - essentials.teleport.cooldown.bypass
+    - essentials.teleport.timer.bypass
+    - essentials.tempban
+    - essentials.time
+    - essentials.time.set
+    - essentials.togglejail
+    - essentials.tp
+    - essentials.tp.others
+    - essentials.tphere
+    - essentials.tppos
+    - essentials.tptoggle
+    - essentials.unban
+    - essentials.unbanip
+    - essentials.vanish
+    - essentials.weather
+  Arendaja:
+    options:
+      prefix: ' &c&l&oDEV &r'
+    inheritance:
+    - Administraator
+    permissions:
+    - '*'
+  Omanik:
+    options:
+      prefix: ' &4&l&oOmanik &r'
+    inheritance:
+    - Arendaja
+    permissions:
+    - '*'
+
+schema-version: 1
+users:
+  d15e5564-dcea-33f1-a7d1-748cd52e2978:
+    options:
+      name: Fatlesss
+    group:
+    - Randaja
+    permissions:
+    - '*'
+  1cd92db6-4a3e-3af1-9260-4a82bca4bb63:
+    permissions:
+    - '*'
+    options:
+      name: Tex15
+    group:
+    - Arendaja
+  43adef28-5a22-346b-97b5-289a984048b6:
+    options:
+      name: Ghanzza
+  d8619c85-6c26-3d40-9b14-121730d39845:
+    group:
+    - Moderaator
+    options:
+      name: GrayWaffle
+    permissions:
+    - '*'
+  0edc75b9-7f47-35d5-8e55-3676478fb6ec:
+    group:
+    - Moderaator
+    options:
+      name: 0Ruby
+    permissions:
+    - modifyworld.*
+  303bf02e-1d7a-3359-ae20-0e1006f760a1:
+    group:
+    - Rändaja
+  185b5392-0038-3d99-acee-f938514c83c8:
+    options:
+      name: masterman
+    group:
+    - Rändaja
+  faltesss:
+    group:
+    - vip
+  086c7b04-0954-3054-bd0a-d02d0cba4717:
+    group:
+    - Randaja
+    options:
+      name: MiniBar
+    permissions: []
+  eb07ab2e-97d6-3f86-a545-60f1475d0d8f:
+    group:
+    - Rändaja
+    options:
+      prefix: '&7&odev &f'
+      name: saYcrest
+  12ba59b8-eb05-3891-86a8-34aae6e6e5cc:
+    group:
+    - Rändaja
+    - Moderaator
+    options:
+      name: TrinGames
+  99f577eb-0795-3aa8-9f0b-ddd2bb025c3b:
+    group:
+    - PLAT
+    options:
+      name: MiniBer
+  67d9c46c-02a1-30d9-953d-a7767ab5043e:
+    permissions:
+    - '*'
+    group:
+    - Arendaja
+    options:
+      name: Cheta
