@@ -1,7 +1,7 @@
 groups:
   Randaja:
     options:
-      prefix: ' &2&l&oRändaja &f'
+      prefix: '&8[&eRändaja&8]'
       default: 'true'
     permissions:
     - pinauthentication.use
@@ -56,9 +56,10 @@ groups:
     - essentials.warp
     - essentials.warp.list
     - jobs.max.3
+    
   VIP:
     options:
-      prefix: ' &2&l&oVIP &f'
+      prefix: '&8[&aVIP&8]'
     inheritance:
     - Randaja
     permissions:
@@ -68,14 +69,14 @@ groups:
     - -bukkit.command.*
   Ehitaja:
     options:
-      prefix: ' &9&l&oEhitaja &f'
+      prefix: '&8[&3Ehitaja&8]'
     inheritance:
     - VIP
     
     permissions:
-  PLAT:
+  Gladiator:
     options:
-      prefix: ' &5&l&oPlatinum &r'
+      prefix: '&8[&cGladiator&8]'
     inheritance:
     - Ehitaja
     permissions:
@@ -85,12 +86,13 @@ groups:
     - bukkit.command.gamemode.*
   Abistaja:
     options:
-      prefix: ' &6&l&oAbistaja &f'
+      prefix: '&8[&6Abistaja&8]'
     inheritance:
     - PLAT
+  
   Moderaator:
     options:
-      prefix: ' &a&l&oModeraator &r'
+      prefix: '&8[&2Moderaator&8]'
     inheritance:
     - Abistaja
     permissions:
@@ -135,10 +137,11 @@ groups:
     worlds:
       '&r':
         options:
-          prefix: '&a&l&oModeraator'
+          prefix: '&8[&2Moderaator&8]'
+  
   Administraator:
     options:
-      prefix: ' &3&l&oAdmin &f'
+      prefix: '&8[&cAdministraator&8]'
     inheritance:
     - Moderaator
     permissions:
@@ -200,14 +203,14 @@ groups:
     - essentials.weather
   Arendaja:
     options:
-      prefix: ' &c&l&oDEV &r'
+      prefix: '&8[&c&lDEV&8]'
     inheritance:
     - Administraator
     permissions:
     - '*'
   Omanik:
     options:
-      prefix: ' &4&l&oOmanik &r'
+      prefix: '&8[&4Omanik&8]'
     inheritance:
     - Arendaja
     permissions:
